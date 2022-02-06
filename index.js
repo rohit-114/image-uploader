@@ -5,8 +5,8 @@ const multer = require("multer");
 const app = express();
 const port = process.env.PORT || 5000;
 app.use(cors());
-app.use(express.static(path.join(__dirname, "client/build")));
-app.use(express.static(__dirname + "/client/public/images"));
+app.use(express.static(path.join(__dirname, "/client/build")));
+app.use(express.static(path.join(__dirname, "/client/public/images")));
 
 const multerStorage = multer.diskStorage({
   destination: (req, file, cb) => {
