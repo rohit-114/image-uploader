@@ -1,0 +1,39 @@
+.loader {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 4%;
+}
+
+.loader > h3 {
+  margin: 0 0 16px;
+}
+
+.outer {
+  width: 400px;
+  height: 8px;
+  background: rgba(242, 242, 242, 1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.inner {
+  width: 40%;
+  height: 8px;
+  background: rgba(47, 128, 237, 1);
+  border-radius: 8px;
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}

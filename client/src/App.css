@@ -1,0 +1,10 @@
+button {
+  background: rgba(47, 128, 237, 1);
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 8px 0;
+}

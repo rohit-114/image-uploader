@@ -1,0 +1,26 @@
+.banner {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  box-shadow: 0px 4px 12px rgb(0 0 0 / 10%);
+  padding: 2.2%;
+  top: 3%;
+  animation: fadeOut ease-out 5s 1.5s;
+}
+
+.banner > p {
+  margin: 0 0 0 8px;
+}
+
+.info {
+  font-size: 1.8rem;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
