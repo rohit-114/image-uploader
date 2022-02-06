@@ -28,7 +28,7 @@ const Uploader = () => {
     data.append("image", file);
     const postImage = async () => {
       try {
-        const res = await axios.post("http://localhost:5000/single", data, {
+        const res = await axios.post("/single", data, {
           headers: {
             "Content-Type": "multipart/form-data",
           },

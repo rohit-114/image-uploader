@@ -5,7 +5,7 @@ const Uploaded = ({ name }) => {
   const [url, setUrl] = useState("");
 
   useEffect(() => {
-    setUrl(`${process.env.PUBLIC_URL}/${name}`);
+    setUrl(`https://tranquil-fortress-13292.herokuapp.com//${name}`);
   }, [name]);
 
   return (
