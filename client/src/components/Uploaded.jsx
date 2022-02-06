@@ -5,7 +5,7 @@ const Uploaded = ({ name }) => {
   const [url, setUrl] = useState("");
 
   useEffect(() => {
-    setUrl(`https://tranquil-fortress-13292.herokuapp.com//${name}`);
+    setUrl(`https://tranquil-fortress-13292.herokuapp.com/${name}`);
   }, [name]);
 
   return (
@@ -13,7 +13,7 @@ const Uploaded = ({ name }) => {
       <span className="material-icons-round tick">check_circle</span>
       <h2 className="heading">Uploaded Successfully!</h2>
       <div className="uploaded-image">
-        <img src={`images/${name}`} alt="" />
+        <img src={`/${name}`} alt="" />
       </div>
       <div className="input-area">
         <input value={url} type="text" readOnly />
