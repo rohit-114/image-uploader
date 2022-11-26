@@ -11,7 +11,7 @@ const Uploader = () => {
   const [uploading, setUploading] = useState(false);
   const [uploaded, setUploaded] = useState(false);
   const [error, setError] = useState({ msg: "", state: false });
-  const [imgName, setImgName] = useState("");
+  const [url, setUrl] = useState("");
   const imageInput = useRef();
 
   function handleChange(e) {
@@ -28,12 +28,17 @@ const Uploader = () => {
     data.append("image", file);
     const postImage = async () => {
       try {
-        const res = await axios.post("/single", data, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
-        setImgName(res.data.filename);
+        const res = await axios.post(
+          "https://image-uploader-backend-rho.vercel.app/single",
+          data,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        console.log("res in post", res.data);
+        setUrl(res.data.secure_url);
         setUploaded(true);
       } catch (err) {
         setError({ msg: `${err.response.data.msg}`, state: true });
@@ -59,7 +64,7 @@ const Uploader = () => {
               document.getElementById("error")
             )}
           {uploaded ? (
-            <Uploaded name={imgName} />
+            <Uploaded url={url} />
           ) : (
             <div className="uploader">
               <h2 className="title">Upload your image</h2>
