@@ -32,6 +32,10 @@ const upload = multer({
   fileFilter: multerFilter,
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello from image uploader backend");
+});
+
 app.post(
   "/single",
   upload.single("image"),
@@ -51,3 +55,5 @@ app.post(
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+module.exports = app;
