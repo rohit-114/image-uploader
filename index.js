@@ -7,7 +7,14 @@ require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-app.use(cors());
+
+const corsOptions = {
+  origin: "https://image-uploader-beta.vercel.app",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
