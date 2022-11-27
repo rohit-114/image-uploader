@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://tranquil-fortress-13292.herokuapp.com/">
+    <a href="https://image-uploader-beta.vercel.app">
       Demo
     </a>
     <span> | </span>
