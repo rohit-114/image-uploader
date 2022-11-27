@@ -32,7 +32,7 @@ const Uploader = () => {
     const postImage = async () => {
       try {
         const res = await axios.post(
-          "http://image-uploader-backend-rho.vercel.app/single",
+          "https://image-uploader-backend-rho.vercel.app/single",
           data,
           {
             headers: {
