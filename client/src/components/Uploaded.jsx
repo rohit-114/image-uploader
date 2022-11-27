@@ -1,13 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Uploaded.css";
 
 const Uploaded = ({ url }) => {
-  // const [url, setUrl] = useState("");
-
-  // useEffect(() => {
-  //   setUrl(`https://image-uploader-backend-rho.vercel.app/${name}`);
-  // }, [name]);
-
   return (
     <div className="uploaded">
       <span className="material-icons-round tick">check_circle</span>

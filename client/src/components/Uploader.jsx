@@ -26,10 +26,13 @@ const Uploader = () => {
     setUploading(true);
     const data = new FormData();
     data.append("image", file);
+    for (var key of data.entries()) {
+      console.log(key[0] + ", " + key[1]);
+    }
     const postImage = async () => {
       try {
         const res = await axios.post(
-          "https://image-uploader-backend-rho.vercel.app/single",
+          "http://image-uploader-backend-rho.vercel.app/single",
           data,
           {
             headers: {
@@ -37,7 +40,6 @@ const Uploader = () => {
             },
           }
         );
-        console.log("res in post", res.data);
         setUrl(res.data.secure_url);
         setUploaded(true);
       } catch (err) {
